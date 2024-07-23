@@ -21,8 +21,7 @@
       </div>
       <div class="container">
         <div class="info">
-          <h1>DISCOVER</h1>
-          <p>Lorem Ipsum</p>
+          <h1>GALLERY</h1>
           <input type="text" name="" id="" placeholder="Search" />
         </div>
       </div>
@@ -48,12 +47,18 @@
         "src/nvl(2).png",
         "src/nvl(3).png",
         "src/nvl(4).png",
-        "src/nvl(5).png"
+        "src/nvl(5).png",
+        "src/nvl(6).png",
+        "src/nvl(7).png",
+        "src/nvl(8).png",
+        "src/nvl(9).png",
+        "src/nvl(10).png"
       );
       let i = 0;
       function nextImg() {
         if (i < 4) {
           hero.style.backgroundImage = 'url("' + BackgroundImg[i + 1] + '")';
+          thumbnail[i + 1].sets;
           thumbnail[i + 1].classList.add("active");
           thumbnail[i].classList.remove("active");
           i++;
