@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>My Gallery</title>
+  </head>
+  <body id="gallery">
+    <div id="hero">
+      <div class="navbar">
+        <img src="src/Candock.png" class="logo" alt="" />
+        <div class="user">
+          <button type="button">Explore</button>
+          <img src="src/lindsday.png" class="logo" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="info">
+          <h1>DISCOVER</h1>
+          <p>Lorem Ipsum</p>
+          <input type="text" name="" id="" placeholder="Search" />
+        </div>
+      </div>
+      <div class="slider">
+        <img src="src/left-arrow.png" alt="" id="prev" onclick="prevImg()" />
+        <div class="preview">
+          <img src="src/nvl(1).png" class="active thumbnail" />
+          <img src="src/nvl(2).png" class="thumbnail" />
+          <img src="src/nvl(3).png" class="thumbnail" />
+          <img src="src/nvl(4).png" class="thumbnail" />
+          <img src="src/nvl(5).png" class="thumbnail" />
+        </div>
+        <img src="src/right-arrow.png" alt="" id="next" onclick="nextImg()" />
+      </div>
+    </div>
+    <script>
+      var prev = document.getElementById("prev");
+      var next = document.getElementById("next");
+      var thumbnail = document.getElementsByClassName("thumbnail");
+      var hero = document.getElementById("hero");
+      var BackgroundImg = new Array(
+        "src/nvl(1).png",
+        "src/nvl(2).png",
+        "src/nvl(3).png",
+        "src/nvl(4).png",
+        "src/nvl(5).png"
+      );
+      let i = 0;
+      function nextImg() {
+        if (i < 4) {
+          hero.style.backgroundImage = 'url("' + BackgroundImg[i + 1] + '")';
+          thumbnail[i + 1].classList.add("active");
+          thumbnail[i].classList.remove("active");
+          i++;
+        }
+      }
+      function prevImg() {
+        if (i > 0) {
+          hero.style.backgroundImage = 'url("' + BackgroundImg[i - 1] + '")';
+          thumbnail[i - 1].classList.add("active");
+          thumbnail[i].classList.remove("active");
+          i--;
+        }
+      }
+    </script>
+  </body>
+</html>
