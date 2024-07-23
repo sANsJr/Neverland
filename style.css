@@ -59,6 +59,7 @@
     width: 100%;
     height: 100vh;
     /* background-image: url(src/the-legend-of-neverland.jpg); */
+    background-image: url(src/nvl\(1\).png);
     background-size: cover;
     background-position:center;
     position: relative;
@@ -99,7 +100,7 @@
     cursor: pointer;
 }
 #gallery .container{
-    width: 50%;
+    width: 20%;
     height: 100vh;
     /* background-image: url(src/zi_yang_hua_role.png); */
     background-color: rgba(86, 86, 86, 0.3);
@@ -108,19 +109,19 @@
     position: absolute;
     left: 0;
     top: 0;
-    /* text-align: center; */
+    text-align: center;
     /* background-repeat: no-repeat; */
 }
 #gallery .info{
     width: 550px;
     color: #fff;
     position: absolute;
-    right: 0;
+    left: -40%;
     top: 50%;
     transform: translateY(-50%);
 }
 #gallery .info h1{
-    font-size: 60px;
+    font-size: 30px;
     letter-spacing: 10px;
 }
 #gallery .info p{
